@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.db import connection
 from django.http import JsonResponse
-
+from transparencia.models import Servidor
+import json
 
 def dictfetchall(cursor):
     """
@@ -35,3 +36,12 @@ left join dw_uo_siorg on codigo = trim(cod_siorg_uorg)
         objs = dictfetchall(c)
 
     return JsonResponse({'servidores': objs})
+    
+    
+def servidores2(request):
+
+	ss = Servidor.objects.all()
+	objs = list(ss.values())
+	
+	return JsonResponse({'servidores': objs})
+

@@ -28,3 +28,28 @@ You could also install packages by using the Replit packager interface in the le
 ## Help
 
 If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+
+
+## PostgreSQL
+
+$ sudo -i -u postgres
+postgres=# psql
+postgres=# create database mydb;
+postgres=# create user myuser with encrypted password 'mypass';
+postgres=# grant all privileges on database mydb to myuser;
+alter database progep owner to progep;
+
+$ cat bknegepe.sql | psql -U postgres -d  $(database)
+
+$ sudo -u postgres createuser <username>
+$ sudo -u postgres createdb <dbname>
+
+CREATE DATABASE yourdbname;
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
+## Enviroment 
+set -a
+source .env
+set +a
+
