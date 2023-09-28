@@ -14,12 +14,19 @@ def dictfetchall(cursor):
 
 
 def index(request):
+	return render(request, 'index.html', {})
+
+
+def site(request):
+	return render(request, 'site.html', {})
+
+'''
     with connection.cursor() as c:
         c.execute('select * from dw_servidores limit 5;')
         objs = dictfetchall(c)
 
     return render(request, 'index.html', {'objs': objs})
-
+'''
 
 def servidores(request):
 

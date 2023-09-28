@@ -22,4 +22,7 @@ urlpatterns = [
     path('', views.index),
     path('servidores', views.servidores),
     path('servidores2', views.servidores2),
+    
+    path('transparencia', views.site),
+    
 ]
