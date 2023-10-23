@@ -36,7 +36,8 @@ left join dw_uo_siorg on codigo = trim(cod_siorg_uorg)
     if len(request.GET.keys()) > 0:
         select += '\n' + 'where '
         for param in request.GET.keys():
-            select += f"{param} like '%{request.GET[param]}%' \n"
+            select += f"{param} like '%{request.GET[param]}%' and\n"
+    select = select[:-4]  # Tira o último AND do comando.
     print(select)
     with connection.cursor() as c:
         c.execute(select)
