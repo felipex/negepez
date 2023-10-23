@@ -1,0 +1,8 @@
+SECRET_KEY=f0CoJarjNYkC8CPRuX1J9cXnC3b3wpkHfsiTzaCrQSk
+DB_NAME=zpbmznds
+DB_USER=zpbmznds
+DB_PASSWORD=dI8fDNSVh0mLdZ64G3pdAyPbGc_p9B04
+DB_HOST=bubble.db.elephantsql.com
+DB_PORT=5432
+DB_ENGINE=django.db.backends.postgresql
+
