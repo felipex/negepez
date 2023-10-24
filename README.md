@@ -54,6 +54,20 @@ CREATE DATABASE yourdbname;
 CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
 GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
 
+
+\d+ tablename # Describe table
+ou
+SELECT 
+   table_name, 
+   column_name, 
+   data_type 
+FROM 
+   information_schema.columns
+WHERE 
+   table_name = 'city';
+-----   
+   
+\c databasename # Conecta ao banco
 ## Enviroment 
 set -a
 source .env

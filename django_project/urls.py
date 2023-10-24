@@ -20,9 +20,11 @@ from transparencia import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('servidores', views.servidores),
-    path('servidores2', views.servidores2),
-    
+        
     path('transparencia', views.site),
+
+    path('api/servidores', views.servidores),
+    path('api/servidores2', views.servidores2),
+    
     
 ]

@@ -30,15 +30,19 @@ def site(request):
 
 def servidores(request):
 
-    select = '''select * from dw_servidores
+    select = '''select * from dw_servidores 
 left join dw_uo_siorg on codigo = trim(cod_siorg_uorg)
 '''
     if len(request.GET.keys()) > 0:
         select += '\n' + 'where '
         for param in request.GET.keys():
             select += f"{param} like '%{request.GET[param]}%' and\n"
-    select = select[:-4]  # Tira o último AND do comando.
+            
+        select = select[:-4]  # Tira o último AND do comando.
+	    
+    print("-----------")
     print(select)
+    print("-----------")
     with connection.cursor() as c:
         c.execute(select)
         objs = dictfetchall(c)

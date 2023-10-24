@@ -15,6 +15,10 @@ class Servidor(models.Model):
 	nome = models.CharField(max_length=128)
 	setor = models.CharField(max_length=128)
 	categoria = models.CharField(max_length=128)
+	sexo = models.CharField(max_length=128)
+	jornada_trabalho = models.CharField(max_length=128)
+	idade = models.CharField(max_length=128)
+	categoria = models.CharField(max_length=128)
 	
 	class Meta:
 		managed = False
